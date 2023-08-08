@@ -3,6 +3,14 @@
 
 int main()
 {
-    printf("Hello world!\n");
+    // operator ariable
+    char op;
+
+
+    printf("Choose an operator: + - / *\n");
+    // get operator
+    op = getchar();
+
+    printf("You have chosen: %c", op);
     return 0;
 }
