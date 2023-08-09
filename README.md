@@ -1,18 +1,32 @@
+# Simple Calculator
+
+This is a simple calculator that allows the user to choose an operator and perform calculations with two numbers.
+
+## How to Use the Program
+
+1. Compile the code using a C compiler.
+
+2. Run the compiled program. Follow the instructions to enter an operator and two numbers.
+
+## Code Example
+
+Here's how the program handles operator input and performs simple calculations:
+
+```c
 #include <stdio.h>
-#include <stdlib.h>
 #include <stdbool.h>
+
 int getOperator() {
-    // Choose an operator
     printf("Choose an operator: + - / *\n");
-    // get operator
-    char op = getchar();
-    while (getchar() != '\n'); // Rensa inmatningsbufferten
+    char op;
+    scanf(" %c", &op); // Ignore any leftover characters including newline
     return op;
 }
 
 bool isOperator(char op) {
     return op == '+' || op == '-' ||  op == '/' || op =='*';
 }
+
 int add(int num1, int num2) {
     int result;
     result = num1 + num2;
@@ -38,38 +52,25 @@ int calculate(int num1, int num2, char op) {
     return result;
 }
 
-
-int main()
-{
-    // user numbers and result of calculated numbers
+int main() {
     int num1, num2, result;
-    // operator +, -, /, *
     char op;
 
-    // User chooses an operator to use
-    while(1) {
+    while (1) {
         op = getOperator();
         if (!isOperator(op)) {
-            printf("You need to enter a valid operator");
+            printf("You need to enter a valid operator\n");
         } else {
             break;
         }
     }
 
-    // User enter two numbers
     printf("Enter two numbers.\n");
-
-    // Get and save two numbers chosen by user
     scanf("%d %d", &num1, &num2);
 
-    // calculate two numbers chosen by user
     result = calculate(num1, num2, op);
+    printf("Result: %d\n", result);
 
-    printf("Result: %d", result);
     return 0;
 }
-
-
-
-
 
