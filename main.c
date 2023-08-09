@@ -37,7 +37,13 @@ int calculate(int num1, int num2, char op) {
     }
     return result;
 }
+ void chooseNumbers(int *num1, int *num2) {
+        // User enter two numbers
+        printf("Enter two numbers.\n");
 
+        // Get and save two numbers chosen by user
+        scanf("%d %d", num1, num2);
+    }
 
 int main()
 {
@@ -55,17 +61,14 @@ int main()
             break;
         }
     }
+    // choose numbers
+   chooseNumbers(&num1, &num2);
 
-    // User enter two numbers
-    printf("Enter two numbers.\n");
-
-    // Get and save two numbers chosen by user
-    scanf("%d %d", &num1, &num2);
 
     // calculate two numbers chosen by user
     result = calculate(num1, num2, op);
 
-    printf("Result: %d", result);
+    printf("Result: %d\n", result);
     return 0;
 }
 
