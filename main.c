@@ -1,29 +1,36 @@
 #include <stdio.h>
 #include <stdlib.h>
-
-int main()
-{
-    // operator
-    char op;
-
-    // numbers
-    int num1, num2;
-
+int getOperator() {
     // Choose an operator
     printf("Choose an operator: + - / *\n");
     // get operator
-    op = getchar();
+    char op = getchar();
+    return op;
+}
 
-    // Selected operator
-    printf("You have chosen: %c\n", op);
 
+
+
+int main()
+{
+    // numbers
+    int num1, num2;
+    char op;
+    // get operator
+    op = getOperator();
+
+    printf("you have chosen %c\n", op);
     // Enter two numbers
     printf("Enter two numbers.\n");
 
     // Get and save two numbers
+
     scanf("%d %d", &num1, &num2);
-
-
 
     return 0;
 }
+
+
+
+
+
