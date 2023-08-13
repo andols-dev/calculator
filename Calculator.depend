@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1691599780 source:c:\users\andreas\desktop\c_projects\calculator\minandracalculator\calculator\main.c
+1691945223 source:c:\users\andreas\desktop\c_projects\calculator\minandracalculator\calculator\main.c
 	<stdio.h>
 	<stdlib.h>
 	<stdbool.h>

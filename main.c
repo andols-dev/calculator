@@ -19,6 +19,21 @@ int add(int num1, int num2) {
     return result;
 }
 
+int subtract(int num1, int num2) {
+    int result = num1 - num2;
+    return result;
+}
+
+int multiply(int num1, int num2) {
+    int result = num1 * num2;
+    return result;
+}
+
+float divide(int num1, int num2) {
+    float result = (float)num1 / num2;
+    return result;
+}
+
 int calculate(int num1, int num2, char op) {
     int result;
     switch (op) {
@@ -26,13 +41,13 @@ int calculate(int num1, int num2, char op) {
             result = add(num1, num2);
             break;
         case '-':
-            printf("-");
+            result = subtract(num1, num2);
             break;
         case '*':
-            printf("*");
+            result = multiply(num1, num2);
             break;
         case '/':
-            printf("/");
+            result = divide(num1, num2);
             break;
     }
     return result;
